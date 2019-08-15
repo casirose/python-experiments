@@ -8,11 +8,6 @@ def changeUrl():
     txt.insert(0.0, a)
     # print(r.text)
 
-
-
-    
-    
-
 root= Tk()
 root.geometry('400x400')
 
