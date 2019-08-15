@@ -13,33 +13,66 @@
 # Then, the output of the program should be:
 # 2
 
-up2 = 0
-down2 = 0
-left2 = 0
-right2 = 0
+# up2 = 0
+# down2 = 0
+# left2 = 0
+# right2 = 0
 
-while True:
-    up1 = int(input("UP ="))
-    down1 =  int(input("down ="))
-    left1 = int(input("left = "))
-    right1 = int(input("right = "))
-    up2 = up2 + up1
-    down2 = down2 + down1
-    left2 = left2 + left1
-    right2 = right2 + right1
-    if up1 and down1 and left1 and right1 > 0:
-        print("enter zero as value to get out of the loop")  
-    else:
-        break
+# while True:
+#     try:
             
+#         up1 = int(input("UP ="))
+#         down1 =  int(input("down ="))
+#         left1 = int(input("left = "))
+#         right1 = int(input("right = "))
+        
+#         up2 = up2 + up1
+#         down2 = down2 + down1
+#         left2 = left2 + left1
+#         right2 = right2 + right1
+#         if up1 and down1 and left1 and right1 > 0:
+#             print("enter zero as value to get out of the loop")  
+#         else:
+#             break
+    
+#     except :
+#         print("PLEASE ENTER AN INTEGER TYPE")
+#         break
+   
+# x2 = up2 - down2
+# y2 = left2 - right2
+# x1 = 0
+# y1 = 0
 
-x2 = up2 - down2
-y2 = left2 - right2
-x1 = 0
-y1 = 0
+# def distance(up=0,down=0,left=0,right=0):
+#     distance1 = ((x2-x1)**2 +(y2-y1)**2)**0.5
+#     print("the distance is ",int(distance1))
 
-def distance(up=0,down=0,left=0,right=0):
-    distance1 = ((x2-x1)**2 +(y2-y1)**2)**0.5
-    print("the distance is ",int(distance1))
+# distance(up2,down2,left2,right2)
 
-distance(up2,down2,left2,right2)
+
+a=0
+b=0
+while True:
+   r = input("enter the direction step: ")
+   try:
+
+    if not r:
+        break
+    dire, steps = r.split(' ')
+    steps = int(steps)
+    if dire == "left":
+        a -=  steps
+    elif dire == "right":
+        a +=  steps
+    elif dire == "up":
+        b +=  steps
+    elif dire == "down":
+        b -=  steps
+    else:
+        pass
+   
+   except ValueError:
+        print("please Enter the DIRECTION and the INDEX in INTERGER TYPE")
+distance = (a**2 + b**2)**(1/2)
+print("the output is: ",int(distance))
